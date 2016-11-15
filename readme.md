@@ -1,28 +1,57 @@
-# Laravel PHP Framework
+Laboratory report test system
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+   this is a simple system that allow patients consults his previous reports of test analisys, the system have two type of users operators and users.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
+   Operators:
+ * test Exams  (CRUD)
+ * reports (CRUD)
+ * asociate multiple test to a report
+ * Users (CRUD)
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+   Patients:
+ * check a list of reports
+ * consult the detail of report and test included
+ * download a PDF of detail report
+ 
+  technologies used.
+  * LARAVEL 5.3
+  * Bootrap
+  * JQuery
+  * DOMPDF
+  * Swift Mailer
 
-## Official Documentation
+/******** HOW TO START  ********/
 
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
+1.- INSTALL DB
+	the app was setup with a database call "lab", so let setup a new MYSQL DB, after let import the follow file "lab.sql"
+    DB conexion setting are:
+		
+		'host' =>  'localhost',
+		'port' => '3306',
+        'database' =>'lab',
+        'username' => 'root',
+        'password' => '',
+		
+2.- PREPARE TO BUILD YOUR APP
+	
+	2.1	this app was developed in Laravel 5.3 framework, in this order you to have proper laravel configuration setup, please refer to.
+	https://laravel.com/docs/5.3/installation
+	
+	2.2 	Once ready your environment lets unzip “lab.zip” and place its content in your webserver.
+	
+	2.3 	Go to your app directory /lab/ from a command console and type 
+		Php artisan serve
+			This is necessary to start your app
+	
+	2.4 	finally open your web browser and go to http://localhost:8000/
 
-## Contributing
+3.- USERS
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+     Operator User
+     email: kaderu@gmail.com
+     pass:  123456
 
-## Security Vulnerabilities
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
-"# My project's README" 
+     Pacient User
+     email: kaderu2003@yahoo.com
+     pass:  123456	
